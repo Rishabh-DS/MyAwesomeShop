@@ -1,0 +1,56 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}
+My Orders
+{% endblock title %}
+
+{% block css %}
+  .cbox{
+      border:0.2px solid;
+      height:50px;
+  }
+  .dbox{
+      height:44px;
+  }
+{% endblock css %}
+
+{% block body %}
+<!-- <div class="container">
+    <div class = "container" style = "background-color:lightgray">
+        {% if myorders %}
+        <h1>Your Orders</h1>
+        {% for p in myorders %}
+            <div class = "container my-2">
+                {{p.items_json}}
+            </div>
+        {% endfor %}
+        {% else %}
+        <h1>You Didn't Make any order Yet...</h1>
+        {% endif %}
+    </div>
+</div> -->
+<div class = "container">
+    {% if myorders %}
+    <h1>Your Orders...</h1>
+    {% for p in myorders %}
+    <div class = "container my-2 cbox">
+        <div class = "row">
+            <div class = "col-sm-3 dbox">
+                {{p.orders_list}}
+            </div>
+            <div class = "col-sm-6 dbox">
+                Order Id : {{p.order_id}} 
+            </div>
+            <div class = "col-sm-3 dbox">
+                <a href = '#'>view items ordered</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    
+</div>
+
+
+
+{% endblock body %}
