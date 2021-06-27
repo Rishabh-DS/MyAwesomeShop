@@ -79,6 +79,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'ecomweb1',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+                'host': 'mongodb+srv://RishabhGarg:jaihanuman@cluster0.e1adn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+            }
     }
 }
 
