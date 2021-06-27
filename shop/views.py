@@ -113,7 +113,7 @@ def search(request):
 
 def productView(request,myid):
     product = Product.objects.filter(id = myid)
-    return render(request , 'shop/prodview.html' , {'product':product[0] , 'id':myid})
+    return render(request , 'shop/prodView.html' , {'product':product[0] , 'id':myid})
 
 
 def checkout(request):
