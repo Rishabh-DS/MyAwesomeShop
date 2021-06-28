@@ -171,7 +171,7 @@ def checkout(request):
             pin_code = request.POST.get('pin_code','')
             phone = request.POST.get('phone','')
         deliverycharges = 49
-        amounts = HandleAmounts.objects.get(id=1)
+        amounts = HandleAmounts.objects.get(amount_id=1)
         if int(amount)>amounts.amount_for_free_delivery:
             deliverycharges = 0
         order = Order(items_json = items_json , name = name , email = email , address1 = address1 , address2 = address2 , city = city , state = state , pin_code = pin_code ,  phone = phone , amount = amount , items_count=len(order_list) , delivering_date = delivering_date , delivering_time = delivering_time , delivery_charges = deliverycharges)

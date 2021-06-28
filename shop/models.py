@@ -49,8 +49,13 @@ class Contact(models.Model):
         return f"{self.name} {self.msg_id}"
 
 class HandleAmounts(models.Model):
+    amount_id = models.AutoField(primary_key=True , default=1)
     amount_for_free_delivery = models.IntegerField()
     amount_for_cash_on_delivery = models.IntegerField()
+    delivery_amount = models.IntegerField(default=49)
+
+    def __str__(self):
+        return f"{self.amount_id}"
 
     
 
