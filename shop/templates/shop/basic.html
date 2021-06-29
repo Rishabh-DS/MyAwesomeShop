@@ -181,6 +181,24 @@
       .dropdown-menu .dropdown-item:hover{
           color:black;
       }
+
+      .form-control {
+          display: block;
+          width: 80%;
+          height: calc(2.25rem + 2px);
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #495057;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: .25rem;
+          transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      }
+
+
     }
 
 
@@ -195,13 +213,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <a class="navbar-brand" href="/">MAC</a>
-    <form method='get' action='/search/' class="form-inline my-2 my-lg-0 mx-2">
-      <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search" name="search"
-        id="search">
-      <span class="input-group-btn">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
-      </span>
-    </form>
+    
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -262,6 +274,18 @@
 
         {% comment %} <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"> <i class="bi bi-cart3"></i><span id="cart">0</span>
         </button> {% endcomment %}
+      </ul>
+        
+    </div>
+
+    <form method='get' action='/search/' class="form-inline my-2 my-lg-0 mx-2">
+      <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search" name="search"
+        id="search">
+      <span class="input-group-btn">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+      </span>
+    </form>
+
         <div style = "border-left:1px solid #dfe3e8;padding-left:10px;" id = "popcart">
           <span style="cursor:pointer;color:white;" onclick="openNav()"><span style = "font-size:30px;"><i class="bi bi-cart3"></i></span><span style = "font-size:25px;" id="cart">0</span></span>
         </div>
@@ -293,9 +317,6 @@
             <a href='/checkout'><button style = 'width:100%;' class='btn btn-primary' id ='checkout'><div style = "display:flex;justify-content: space-between;"><span style = "font-size:14px;color:#2a2a2b;">Proceed to Checkout</span><span>₹<span id = 'totalprice'></span></span></div></button></a>
           </div>
         </div>
-      </ul>
-        
-    </div>
   </nav>
 
 
